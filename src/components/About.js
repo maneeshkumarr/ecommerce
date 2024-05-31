@@ -67,7 +67,7 @@ function About() {
             <Card>
               <CardContent sx={{ textAlign: 'center' }}>
                 <Typography variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
-            Manish Vokkaliga
+            Akshay hebbar
                 </Typography>
                 <Typography variant="body1" color="text.secondary">
                   Chief Technology Officer
