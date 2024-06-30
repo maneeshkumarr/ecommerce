@@ -32,6 +32,7 @@ setData(res.data);
             padding: 3,
             width: 128,
             height: 128,
+            background:'white',
           },
         }}
       >
@@ -45,6 +46,8 @@ setData(res.data);
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            background:'black',
+            color:'white',
           }}
         >
           <Link to={`/Products/${item.slug}`}>

@@ -73,7 +73,7 @@ function About() {
                   Chief Technology Officer
                 </Typography>
                 <Typography variant="body2" sx={{ mt: 1 }}>
-                  Vokkaliga oversees all technical aspects and ensures our platform is secure and user-friendly.
+              Hebbar oversees all technical aspects and ensures our platform is secure and user-friendly.
                 </Typography>
               </CardContent>
             </Card>

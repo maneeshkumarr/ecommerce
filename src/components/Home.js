@@ -1,14 +1,12 @@
 import React from 'react';
-import Footer from "./Footer";
 import { Box, Typography, Grid, Card, CardContent, Container } from '@mui/material';
 import backgroundImage from './assets/images/background.jpg';
 
-
-function Home() {
+const Home = () => {
   const featuredProducts = [
     {
       id: 1,
-      title: "Apple Iphone",
+      title: "Apple iPhone",
       description: "This is a great product with excellent features and benefits.",
       price: "₹999",
       brand: "Brand A"
@@ -29,7 +27,7 @@ function Home() {
     },
     {
       id: 4,
-      title: "Speaker ",
+      title: "Speaker",
       description: "An affordable product with essential features for everyday use.",
       price: "₹499",
       brand: "Brand D"
@@ -38,42 +36,36 @@ function Home() {
 
   return (
     <Container sx={{ 
-      padding: 2 ,
-      backgroundImage: `url(${backgroundImage})`, // Set the background image
+      padding: 2,
+      backgroundImage: `url(${backgroundImage})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      padding: 4,
-      color:'white'
+      color: 'white',
+      minHeight: '100vh', // Ensure the container covers the viewport height
     }}>
       {/* Hero Section */}
-      <Box
-        sx={{
-          height: '300px',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          color: 'white',
-          textAlign: 'center',
-          mb: 4,
-          backgroundColor: 'black',
-          padding: 4,
-          borderRadius: 2,
-          
-          
-        }}
-      >
-        <Typography variant="h3" component="h1" sx={{ fontWeight: 'bold' }}>
+      <Box sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        py: 8, // Padding on the Y-axis
+        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Semi-transparent black background
+        borderRadius: 4,
+        backdropFilter: 'blur(5px)', // Apply blur effect for better contrast
+        }}>
+        <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 2 }}>
           Welcome to Our E-commerce Store
         </Typography>
-        <Typography variant="h5" component="h2" sx={{ mt: 2 }}>
+        <Typography variant="h5" sx={{ mb: 4 }}>
           Discover amazing products and great deals!
         </Typography>
       </Box>
 
       {/* Promotional Section */}
-      <Box sx={{ mb: 4, textAlign: 'center' }}>
-        <Typography variant="h4" component="h2" sx={{ mb: 2 }}>
+      <Box sx={{ py: 4, textAlign: 'center' }}>
+        <Typography variant="h4" sx={{ mb: 2 }}>
           Big Summer Sale!
         </Typography>
         <Typography variant="body1" sx={{ mb: 2 }}>
@@ -85,19 +77,14 @@ function Home() {
       </Box>
 
       {/* Featured Products Section */}
-      <Box sx={{ mb: 4 }}>
-        <Typography variant="h4" component="h2" sx={{ mb: 3, textAlign: 'center' }}>
+      <Box sx={{ pb: 4 }}>
+        <Typography variant="h4" sx={{ mb: 3, textAlign: 'center' }}>
           Featured Products
         </Typography>
         <Grid container spacing={3} justifyContent="center">
           {featuredProducts.map((product) => (
             <Grid item key={product.id}>
-              <Card sx={{ maxWidth: 345 ,
-                 backgroundColor: 'linear-gradient(to bottom, yellow, green) ',
-                 backgroundRepeat: 'no-repeat',
-                 padding: 4
-              }}
-              >
+              <Card sx={{ maxWidth: 345, backgroundColor: 'rgba(255, 255, 255, 0.8)', }}>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
                     {product.title}
@@ -119,8 +106,8 @@ function Home() {
       </Box>
 
       {/* Additional Section */}
-      <Box sx={{ mb: 4, textAlign: 'center' }}>
-        <Typography variant="h4" component="h2" sx={{ mb: 2 }}>
+      <Box sx={{ py: 4, textAlign: 'center' }}>
+        <Typography variant="h4" sx={{ mb: 2 }}>
           Why Shop With Us?
         </Typography>
         <Typography variant="body1" sx={{ mb: 2 }}>
